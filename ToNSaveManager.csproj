@@ -33,6 +33,7 @@
     <None Remove="Resources\notification_copy.wav" />
     <None Remove="Resources\notification_secret.wav" />
     <None Remove="Resources\objectives.json" />
+    <None Remove="Resources\music.json" />
     <None Remove="Resources\xs_icon.png" />
   </ItemGroup>
 
@@ -46,6 +47,7 @@
     <EmbeddedResource Include="Resources\notification_secret.wav" />
     <EmbeddedResource Include="Resources\index.json" />
     <EmbeddedResource Include="Resources\objectives.json" />
+    <EmbeddedResource Include="Resources\music.json" />
     <EmbeddedResource Include="Resources\xs_icon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>

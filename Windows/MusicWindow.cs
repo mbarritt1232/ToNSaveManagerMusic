@@ -8,7 +8,7 @@ namespace ToNSaveManager
     public partial class MusicWindow : Form
     {
         internal static MusicWindow? Instance;
-        static List<Music> Music = Music.ImportFromMemory();
+        static List<Music> Musics = Music.ImportFromMemory();
 
         public MusicWindow()
         {
@@ -43,7 +43,7 @@ namespace ToNSaveManager
             LANG.C(this, "MUSIC.TITLE");
 
             foreach (Music obj in listBox1.Items) {
-                (string? tx, string? tt) = LANG.T("OBJECTIVES." + obj.Name.ToUpperInvariant().Replace(' ', '_'));
+                (string? tx, string? tt) = LANG.T("MUSIC." + obj.Name.ToUpperInvariant().Replace(' ', '_'));
                 if (!string.IsNullOrEmpty(tx)) obj.DisplayName = tx;
                 if (!string.IsNullOrEmpty(tt)) obj.Tooltip = tt;
             }
@@ -55,7 +55,7 @@ namespace ToNSaveManager
         {
             listBox1.Items.Clear();
 
-            foreach (Music ob in Music)
+            foreach (Music ob in Musics)
                 listBox1.Items.Add(ob);
 
             LocalizeContent();
