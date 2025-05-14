@@ -45,6 +45,7 @@
             deleteToolStripMenuItem = new ToolStripMenuItem();
             btnSettings = new Button();
             btnObjectives = new Button();
+            btnMusic = new Button();
             linkWiki = new Button();
             splitContainer1 = new SplitContainer();
             btnStats = new Button();
@@ -230,6 +231,22 @@
             linkWiki.UseVisualStyleBackColor = false;
             linkWiki.Click += linkWiki_Clicked;
             // 
+            // btnMusic
+            // 
+            btnMusic.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnMusic.BackColor = Color.FromArgb(46, 52, 64);
+            btnMusic.FlatAppearance.BorderColor = Color.FromArgb(122, 122, 122);
+            btnMusic.FlatStyle = FlatStyle.Flat;
+            btnMusic.ForeColor = Color.White;
+            btnMusic.Location = new Point(0, 223);
+            btnMusic.Name = "btnMusic";
+            btnMusic.Size = new Size(38, 24);
+            btnMusic.TabIndex = 0;
+            btnMusic.TabStop = false;
+            btnMusic.Text = "Music";
+            btnMusic.UseVisualStyleBackColor = false;
+            btnMusic.Click += btnMusic_Click;
+            // 
             // splitContainer1
             // 
             splitContainer1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -247,6 +264,7 @@
             splitContainer1.Panel2.Controls.Add(linkSupport);
             splitContainer1.Panel2.Controls.Add(listBoxEntries);
             splitContainer1.Panel2.Controls.Add(btnObjectives);
+            splitContainer1.Panel2.Controls.Add(btnMusic);
             splitContainer1.Panel2.Controls.Add(linkWiki);
             splitContainer1.Size = new Size(505, 247);
             splitContainer1.SplitterDistance = 178;
@@ -328,6 +346,7 @@
         private ToolStripMenuItem importToolStripMenuItem;
         private Button btnSettings;
         private Button btnObjectives;
+        private Button btnMusic;
         private Button linkWiki;
         private SplitContainer splitContainer1;
         private ToolStripMenuItem ctxMenuEntriesBackup;

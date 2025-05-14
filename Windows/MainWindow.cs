@@ -134,6 +134,7 @@ namespace ToNSaveManager
         internal void LocalizeContent() {
             LANG.C(btnSettings, "MAIN.SETTINGS");
             LANG.C(btnObjectives, "MAIN.OBJECTIVES");
+            LANG.C(btnMusic, "MAIN.MUSIC");
             LANG.C(linkWiki, "MAIN.WIKI");
             LANG.C(linkSupport, "MAIN.SUPPORT");
             LANG.C(btnStats, "MAIN.STATS");
@@ -489,6 +490,10 @@ namespace ToNSaveManager
 
         private void btnObjectives_Click(object sender, EventArgs e) {
             ObjectivesWindow.Open(this);
+        }
+
+        private void btnMusic_Click(object sender, EventArgs e) {
+            MusicWindow.Open(this);
         }
 
         private void btnStats_Click(object sender, EventArgs e) {

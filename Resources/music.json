@@ -1,0 +1,30 @@
+﻿[
+  {
+    "Name": "Event Items Unlocks",
+    "IsSeparator": true
+  },
+  {
+    "Name": "Sealed Sword",
+    "Description": "Found in Museum. Break case with a stun tool.",
+    "DisplayColor": "224, 208, 183"
+  },
+  {
+    "Name": "Gran Faust",
+    "Description": "Survive Arkus with the Sealed Sword.",
+    "DisplayColor": "255, 95, 198"
+  },
+  {
+    "Name": "Winterfest Unlocks",
+    "IsSeparator": true
+  },
+  {
+    "Name": "Place",
+    "Description": "There's something in the snow for you.",
+    "DisplayColor": "138, 235, 255"
+  },
+  {
+    "Name": "Torch Of Obsession",
+    "Description": "Survive the Cold Night.",
+    "DisplayColor": "138, 235, 255"
+  }
+]
