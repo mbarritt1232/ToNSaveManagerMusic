@@ -1,0 +1,86 @@
+name: .NET Core Desktop
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+
+jobs:
+
+  build:
+
+    strategy:
+      matrix:
+        configuration: [Release]
+
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: ToNSaveManager.sln
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    # Install the .NET Core workload
+    - name: Install .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+
+    # Add MSBuild to the PATH
+    - name: Setup MSBuild.exe
+      uses: microsoft/setup-msbuild@v1.0.2
+
+    # Restore the application to populate the obj folder with RuntimeIdentifiers
+    - name: Restore the application
+      run: msbuild $env:Solution_Name /t:Restore /p:Configuration=$env:Configuration
+      env:
+        Configuration: ${{ matrix.configuration }}
+
+    # Build the application
+    - name: Build the application
+      run: dotnet publish $env:Solution_Name -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o ./publish
+      env:
+        Configuration: ${{ matrix.configuration }}
+
+    - name: Zip Artifact
+      run: |
+        Compress-Archive -Path ./publish/* -DestinationPath ToNSaveManager.zip -Update
+
+    # Upload the build artifacts just in case
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: ToNSaveManager
+        path: ToNSaveManager.zip
+
+    - name: Get the date
+      id: get_date
+      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.get_date.outputs.date }}
+        release_name: Release ${{ steps.get_date.outputs.date }}
+        draft: true
+        prerelease: false
+  
+    - name: Upload Release Asset
+      id: upload_release_asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./ToNSaveManager.zip
+        asset_name: ToNSaveManager.zip
+        asset_content_type: application/zip
