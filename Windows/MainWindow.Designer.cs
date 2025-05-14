@@ -238,10 +238,10 @@
             btnMusic.FlatAppearance.BorderColor = Color.FromArgb(122, 122, 122);
             btnMusic.FlatStyle = FlatStyle.Flat;
             btnMusic.ForeColor = Color.White;
-            btnMusic.Location = new Point(0, 223);
+            btnMusic.Location = new Point(400, 223);
             btnMusic.Name = "btnMusic";
             btnMusic.Size = new Size(38, 24);
-            btnMusic.TabIndex = 0;
+            btnMusic.TabIndex = 6;
             btnMusic.TabStop = false;
             btnMusic.Text = "Music";
             btnMusic.UseVisualStyleBackColor = false;
@@ -266,7 +266,7 @@
             splitContainer1.Panel2.Controls.Add(btnObjectives);
             splitContainer1.Panel2.Controls.Add(btnMusic);
             splitContainer1.Panel2.Controls.Add(linkWiki);
-            splitContainer1.Size = new Size(505, 247);
+            splitContainer1.Size = new Size(605, 247);
             splitContainer1.SplitterDistance = 178;
             splitContainer1.TabIndex = 0;
             splitContainer1.TabStop = false;
