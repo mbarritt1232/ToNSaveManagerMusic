@@ -2,18 +2,6 @@
 
 namespace ToNSaveManager.Models
 {
-    internal struct LegacyObjective
-    {
-        public bool IsCompleted;
-        public string Name;
-
-        public LegacyObjective()
-        {
-            IsCompleted = false;
-            Name = string.Empty;
-        }
-    }
-
     internal class Music
     {
         [JsonIgnore] public string? DisplayName { get; set; }
