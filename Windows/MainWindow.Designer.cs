@@ -238,9 +238,9 @@
             btnMusic.FlatAppearance.BorderColor = Color.FromArgb(122, 122, 122);
             btnMusic.FlatStyle = FlatStyle.Flat;
             btnMusic.ForeColor = Color.White;
-            btnMusic.Location = new Point(110, 223);
+            btnMusic.Location = new Point(103, 223);
             btnMusic.Name = "btnMusic";
-            btnMusic.Size = new Size(38, 24);
+            btnMusic.Size = new Size(58, 24);
             btnMusic.TabIndex = 6;
             btnMusic.TabStop = false;
             btnMusic.Text = "Music";
