@@ -436,5 +436,9 @@
 	"STATS.CTX_TYPE_IN_VALUE.TITLE": "Type in custom value for",
 	"STATS.CTX_COPY_TEMPLATE_KEY": "Copy Template Key",
 	"STATS.CTX_COPY_TEMPLATE_KEY.TT": "Copy the template key for this stat.\nThis can be used in the OSC Chatbox Template under Settings.",
-	"STATS.CTX_COPY_TEMPLATE_KEY.MESSAGE": "Copied to clipboard: {0}"
+	"STATS.CTX_COPY_TEMPLATE_KEY.MESSAGE": "Copied to clipboard: {0}",
+
+	"MUSIC.TITLE1": "1",
+	"MUSIC.TITLE2": "2",
+	"MUSIC.TITLE3": "3"
 }

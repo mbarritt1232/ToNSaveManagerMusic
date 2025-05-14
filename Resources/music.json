@@ -1,26 +1,14 @@
 ﻿[
   {
-    "Name": "Event Items Unlocks",
-    "IsSeparator": true
-  },
-  {
-    "Name": "Sealed Sword",
+    "Name": "Music1",
     "DisplayColor": "224, 208, 183"
   },
   {
-    "Name": "Gran Faust",
+    "Name": "Music2",
+    "DisplayColor": "224, 208, 183"
+  },
+  {
+    "Name": "Music3",
     "DisplayColor": "255, 95, 198"
-  },
-  {
-    "Name": "Winterfest Unlocks",
-    "IsSeparator": true
-  },
-  {
-    "Name": "Place",
-    "DisplayColor": "138, 235, 255"
-  },
-  {
-    "Name": "Torch Of Obsession",
-    "DisplayColor": "138, 235, 255"
   }
 ]
