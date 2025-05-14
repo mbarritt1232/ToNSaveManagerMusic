@@ -208,7 +208,7 @@
             btnObjectives.ForeColor = Color.White;
             btnObjectives.Location = new Point(0, 223);
             btnObjectives.Name = "btnObjectives";
-            btnObjectives.Size = new Size(165, 24);
+            btnObjectives.Size = new Size(100, 24);
             btnObjectives.TabIndex = 0;
             btnObjectives.TabStop = false;
             btnObjectives.Text = "Objectives";
@@ -266,7 +266,7 @@
             splitContainer1.Panel2.Controls.Add(btnObjectives);
             splitContainer1.Panel2.Controls.Add(btnMusic);
             splitContainer1.Panel2.Controls.Add(linkWiki);
-            splitContainer1.Size = new Size(505, 247);
+            splitContainer1.Size = new Size(700, 247);
             splitContainer1.SplitterDistance = 178;
             splitContainer1.TabIndex = 0;
             splitContainer1.TabStop = false;
