@@ -233,12 +233,12 @@
             // 
             // btnMusic
             // 
-            btnMusic.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnMusic.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnMusic.BackColor = Color.FromArgb(46, 52, 64);
             btnMusic.FlatAppearance.BorderColor = Color.FromArgb(122, 122, 122);
             btnMusic.FlatStyle = FlatStyle.Flat;
             btnMusic.ForeColor = Color.White;
-            btnMusic.Location = new Point(400, 223);
+            btnMusic.Location = new Point(322, 223);
             btnMusic.Name = "btnMusic";
             btnMusic.Size = new Size(38, 24);
             btnMusic.TabIndex = 6;
@@ -266,7 +266,7 @@
             splitContainer1.Panel2.Controls.Add(btnObjectives);
             splitContainer1.Panel2.Controls.Add(btnMusic);
             splitContainer1.Panel2.Controls.Add(linkWiki);
-            splitContainer1.Size = new Size(605, 247);
+            splitContainer1.Size = new Size(505, 247);
             splitContainer1.SplitterDistance = 178;
             splitContainer1.TabIndex = 0;
             splitContainer1.TabStop = false;
